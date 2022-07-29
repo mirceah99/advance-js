@@ -1,3 +1,8 @@
 const hello = $G("MIRCEA", "H");
-console.log("hello", hello);
-hello.updateHtml("#greeting", "formal");
+const loginButton = $("#login");
+const languageDropdown = $("#lang");
+
+loginButton.click(function () {
+	// first set proper language and after update the html
+	hello.setLanguage(languageDropdown.val()).updateHtml("#greeting", "formal");
+});
